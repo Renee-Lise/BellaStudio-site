@@ -1,0 +1,277 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #0B1020; /* bleu nuit velouté */
+    color: #f7f7ff;
+    line-height: 1.6;
+}
+
+.hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at top left, rgba(244, 176, 204, 0.3), transparent 60%),
+                radial-gradient(circle at bottom right, rgba(212, 175, 55, 0.25), transparent 55%),
+                #050816; /* bleu nuit velours */
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(5, 8, 22, 0.2), rgba(5, 22, 37, 0.9));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    max-width: 900px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #f9f4ff;
+}
+
+.tagline {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    color: #e7d7ff;
+}
+
+.main-nav {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.main-nav a {
+    text-decoration: none;
+    padding: 0.6rem 1.1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(244, 176, 204, 0.5);
+    color: #F4B0CC; /* rose poudré */
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    background: rgba(11, 16, 32, 0.6);
+}
+
+.main-nav a:hover {
+    background: rgba(244, 176, 204, 0.12);
+    border-color: #F4B0CC;
+}
+
+main {
+    padding: 3rem 1.5rem 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.intro {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+    color: #fceffd;
+}
+
+.intro p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #dcd7ff;
+}
+
+.universe {
+    border-radius: 1.5rem;
+    padding: 2rem 1.7rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.universe::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+.universe-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.universe h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.universe-tagline {
+    margin-bottom: 0.9rem;
+    font-size: 0.95rem;
+    color: #F4B0CC;
+}
+
+.universe p {
+    margin-bottom: 0.8rem;
+    color: #f2ecff;
+}
+
+.universe-points {
+    list-style: none;
+    margin-bottom: 1.1rem;
+}
+
+.universe-points li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+}
+
+.universe-points li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #F4B0CC;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.3rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    border: 1px solid rgba(247, 236, 255, 0.7);
+    color: #050816;
+    background: linear-gradient(135deg, #F4B0CC, #C38CB5); /* rose poudré -> prune claire */
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
+    filter: brightness(1.03);
+}
+
+/* Variations des univers */
+
+.bellainvest {
+    background: radial-gradient(circle at top left, rgba(244, 176, 204, 0.15), transparent 55%),
+                radial-gradient(circle at bottom right, rgba(212, 175, 55, 0.18), transparent 60%),
+                #050818;
+}
+
+.bellainvest::before {
+    background: linear-gradient(135deg, rgba(4, 12, 40, 0.9), rgba(11, 16, 32, 0.9));
+}
+
+.bellaodyssee {
+    background: radial-gradient(circle at top right, rgba(244, 176, 204, 0.25), transparent 55%),
+                radial-gradient(circle at bottom left, rgba(195, 140, 181, 0.2), transparent 60%),
+                #180815;
+}
+
+.bellaodyssee::before {
+    background: linear-gradient(135deg, rgba(24, 8, 21, 0.9), rgba(29, 10, 30, 0.9));
+}
+
+.viloassistance {
+    background: radial-gradient(circle at top left, rgba(180, 200, 255, 0.25), transparent 55%),
+                radial-gradient(circle at bottom right, rgba(140, 160, 200, 0.18), transparent 60%),
+                #071320;
+}
+
+.viloassistance::before {
+    background: linear-gradient(135deg, rgba(7, 19, 32, 0.92), rgba(10, 26, 46, 0.9));
+}
+
+.minidsa {
+    background: radial-gradient(circle at top right, rgba(202, 237, 255, 0.25), transparent 55%),
+                radial-gradient(circle at bottom left, rgba(255, 229, 204, 0.25), transparent 60%),
+                #071016;
+}
+
+.minidsa::before {
+    background: linear-gradient(135deg, rgba(7, 16, 22, 0.9), rgba(6, 22, 24, 0.9));
+}
+
+.contact {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.7rem;
+    color: #fceffd;
+}
+
+.contact p {
+    margin-bottom: 0.7rem;
+    color: #ddd7ff;
+}
+
+.contact-list {
+    list-style: none;
+    font-size: 0.95rem;
+    color: #f2ecff;
+}
+
+.contact-list li {
+    margin-bottom: 0.25rem;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 1.5rem 1rem 2.5rem;
+    font-size: 0.85rem;
+    color: #a9a2c7;
+}
+
+.back-to-top {
+    display: inline-block;
+    margin-top: 0.3rem;
+    text-decoration: none;
+    color: #F4B0CC;
+    font-size: 0.85rem;
+}
+
+.back-to-top:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 2.5rem 1.2rem 3rem;
+    }
+
+    .universe {
+        padding: 1.7rem 1.3rem;
+    }
+}
