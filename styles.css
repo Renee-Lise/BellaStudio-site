@@ -40,11 +40,22 @@ body {
     max-width: 900px;
 }
 
+/* Logo Bella'Studio dans le hero */
+.brand-logo {
+    max-width: 220px;
+    width: 60%;
+    height: auto;
+    margin: 0 auto 1rem auto;
+    display: block;
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.6));
+}
+
 .hero h1 {
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-size: clamp(2.3rem, 3.5vw, 3rem);
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #f9f4ff;
+    margin-top: 0.2rem;
 }
 
 .tagline {
@@ -273,5 +284,9 @@ main {
 
     .universe {
         padding: 1.7rem 1.3rem;
+    }
+
+    .brand-logo {
+        max-width: 190px;
     }
 }
