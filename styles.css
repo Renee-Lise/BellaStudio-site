@@ -111,6 +111,8 @@ main {
     color: #dcd7ff;
 }
 
+/* Univers */
+
 .universe {
     border-radius: 1.5rem;
     padding: 2rem 1.7rem;
@@ -136,6 +138,22 @@ main {
 .universe h2 {
     font-size: 1.4rem;
     margin-bottom: 0.4rem;
+}
+
+.universe-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.3rem;
+}
+
+.universe-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 999px;
+    border: 1px solid rgba(244, 176, 204, 0.65);
+    background: rgba(5, 8, 22, 0.8);
 }
 
 .universe-tagline {
@@ -169,6 +187,43 @@ main {
     color: #F4B0CC;
 }
 
+.universe-note {
+    font-size: 0.9rem;
+    color: #d7d0ff;
+    margin-bottom: 0.9rem;
+}
+
+/* Grille d'offres BellaInvest */
+
+.offer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.1rem 0 1.3rem;
+}
+
+.offer-card {
+    background: rgba(7, 12, 32, 0.95);
+    border-radius: 1rem;
+    padding: 1rem 1rem 1.1rem;
+    border: 1px solid rgba(244, 176, 204, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
+}
+
+.offer-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
+    color: #fceffd;
+}
+
+.offer-card p {
+    font-size: 0.9rem;
+    color: #e4ddff;
+    margin-bottom: 0.7rem;
+}
+
+/* Boutons */
+
 .btn {
     display: inline-block;
     padding: 0.7rem 1.3rem;
@@ -187,6 +242,25 @@ main {
     transform: translateY(-1px);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
     filter: brightness(1.03);
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 0.55rem 1.1rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 0.88rem;
+    border: 1px solid rgba(244, 176, 204, 0.85);
+    color: #F4B0CC;
+    background: transparent;
+    font-weight: 500;
+    transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.btn-outline:hover {
+    background: rgba(244, 176, 204, 0.12);
+    color: #ffffff;
+    transform: translateY(-1px);
 }
 
 /* Variations des univers */
@@ -231,8 +305,67 @@ main {
     background: linear-gradient(135deg, rgba(7, 16, 22, 0.9), rgba(6, 22, 24, 0.9));
 }
 
+/* Section services / prestations */
+
+.services {
+    margin-top: 2.5rem;
+    padding-top: 2.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.services h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    text-align: center;
+    color: #fceffd;
+}
+
+.services-intro {
+    max-width: 750px;
+    margin: 0 auto 1.4rem;
+    text-align: center;
+    color: #dcd7ff;
+    font-size: 0.95rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.service-card {
+    background: radial-gradient(circle at top left, rgba(244, 176, 204, 0.08), transparent 55%),
+                #050818;
+    border-radius: 1.2rem;
+    padding: 1.2rem 1.2rem 1.3rem;
+    border: 1px solid rgba(244, 176, 204, 0.28);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.55);
+}
+
+.service-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+    color: #fceffd;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    color: #e4ddff;
+    margin-bottom: 0.5rem;
+}
+
+.service-note {
+    font-size: 0.86rem;
+    color: #d7d0ff;
+    margin-bottom: 0.7rem;
+}
+
+/* Contact & footer */
+
 .contact {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -277,6 +410,8 @@ main {
     text-decoration: underline;
 }
 
+/* Responsive */
+
 @media (max-width: 768px) {
     main {
         padding: 2.5rem 1.2rem 3rem;
@@ -288,5 +423,21 @@ main {
 
     .brand-logo {
         max-width: 190px;
+    }
+
+    .offer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .offer-card {
+        padding: 0.9rem 0.9rem 1rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 1rem 1rem 1.1rem;
     }
 }
